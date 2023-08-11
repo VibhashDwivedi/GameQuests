@@ -1,0 +1,14 @@
+*{
+    font-family: 'Roboto';
+}
+
+.links1{
+    font-weight: 600;
+    font-size: larger;
+    color: white
+}
+
+.links1:visited{
+  
+    color: white;
+}
