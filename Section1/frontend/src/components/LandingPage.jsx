@@ -5,11 +5,12 @@ import { useFormik} from 'formik'
 import Swal from 'sweetalert2'
 import * as Yup from 'yup'
 import { Link, useNavigate } from 'react-router-dom'
+import useUserContext from '../UserContext'
 
 
 const LandingPage = () => {
 
-
+  const{setLoggedIn} = useUserContext();
     const navigate = useNavigate();
 
     const loginSchema = Yup.object().shape({
@@ -51,7 +52,7 @@ const LandingPage = () => {
       const data = await res.json();
       sessionStorage.setItem('user',JSON.stringify(data));
       console.log(data);
-      //setLoggedIn(true);
+      setLoggedIn(true);
 
 
     }else if(res.status === 401){

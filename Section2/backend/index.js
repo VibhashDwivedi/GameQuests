@@ -7,6 +7,7 @@ const port = 5000;
 
 const userRouter = require('./routers/userRouter')
 const postRouter = require('./routers/postRouter')
+const tournamentRouter = require('./routers/tournamentRouter')
 const utilRouter = require('./routers/util');
 const req = require('express/lib/request');
 
@@ -18,6 +19,7 @@ app.use(express.json());
 
 app.use('/user',userRouter);
 app.use('/post',postRouter);
+app.use('/tournament',tournamentRouter);
 app.use('/util', utilRouter);
 
 app.use(express.static('./uploads'));

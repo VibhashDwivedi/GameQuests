@@ -1,9 +1,12 @@
-const { useContext } = require("react");
+const { useContext, useEffect } = require("react");
 const { useState } = require("react");
 const { createContext } = require("react");
 
 //initialize context
  const UserContext = createContext();
+
+ 
+ 
 
  //create a provider
  export const  UserProvider = ({children}) => {
@@ -13,7 +16,7 @@ const { createContext } = require("react");
         JSON.parse(sessionStorage.getItem('user'))
         
      );
-   
+  
      const [LoggedIn, setLoggedIn] = useState(currentUser !==null ? true : false);
      
      const logout = () => {
@@ -22,7 +25,7 @@ const { createContext } = require("react");
         setLoggedIn(false);
      }
 
-    return <UserContext.Provider value={{ LoggedIn, setLoggedIn, logout}}>
+    return <UserContext.Provider value={{currentUser, setcurrentUser ,LoggedIn, setLoggedIn, logout}}>
            {children}
     </UserContext.Provider>
  }

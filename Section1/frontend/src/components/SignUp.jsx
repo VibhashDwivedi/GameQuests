@@ -18,6 +18,7 @@ const SignUp = () => {
       .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
     password: Yup.string().min(7,'Too Short!').required('Required'),
+    
   });
  
   
@@ -25,7 +26,8 @@ const SignUp = () => {
     initialValues: {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      
     },
 
     onSubmit: async (values) => {
@@ -81,12 +83,12 @@ validationSchema : SignupSchema
   return (
     <div className="d-flex align-items-center justify-content-left background2 ">
  
-    <div className="card my-4  p-5   text-white signupcard"  style={{width:'550px', height:'550px' , marginLeft:'90px'}}>
+    <div className="card my-3  p-5 py-2   text-white signupcard"  style={{width:'550px', height:'560px' , marginLeft:'90px'}}>
       <div className="card-body card-shadow-lg ">
-        <h2 className="text-uppercase text-center mb-4 text-black fs-2 fw-bold">Register your account</h2>
-        <form onSubmit={signupForm.handleSubmit}>
+        <h2 className="text-uppercase text-center my-2 text-white fs-1 fw-bold edit-title2">Register your account</h2>
+        <form onSubmit={signupForm.handleSubmit} >
           
-          <label className="form-label mt-3 text-black" htmlFor="form3Example1cg">
+          <label className="form-label mt-3 " htmlFor="form3Example1cg">
               Your Name
             </label>
             <p className='error-label'>{signupForm.touched.name? signupForm.errors.name :''}</p>
@@ -99,7 +101,7 @@ validationSchema : SignupSchema
            
           
           
-          <label className="form-label mt-2 text-black" htmlFor="form3Example3cg">
+          <label className="form-label mt-2 " htmlFor="form3Example3cg">
               Your Email
             </label>
             <p className='error-label'>{signupForm.touched.email? signupForm.errors.email :''}</p>
@@ -112,7 +114,7 @@ validationSchema : SignupSchema
            
           
          
-          <label className="form-label mt-2 text-black" htmlFor="form3Example4cg">
+          <label className="form-label mt-2 " htmlFor="form3Example4cg">
               Password
             </label>
             <p className='error-label'>{signupForm.touched.password? signupForm.errors.password:''}</p>
@@ -122,8 +124,8 @@ validationSchema : SignupSchema
               className="form-control "
               name="password" onChange={signupForm.handleChange} value={signupForm.values.password} 
             />
-           <label htmlFor="" className='form-label'>Upload File</label>
-          
+           <label htmlFor="" className='form-label'>Profile Pic</label>
+           
           <input
              type="file"
              id=""
@@ -137,15 +139,15 @@ validationSchema : SignupSchema
           <div className="d-flex justify-content-center mt-4">
             <button
               type="submit"
-              className="btn btn-success  gradient-custom-4 text-body"
+              className="btn btn-primary w-50 line2 text-white"
             >
               Register
             </button>
           </div>
-          <p className="text-center text-muted mt-2 mb-0 text-white">
+          <p className="text-center  mt-2 mb-0 text-white">
             Have an account?{" "}
-            <Link to="/landingpage" className="fw-bold text-body text-white">
-              <u>Login here</u>
+            <Link to="/landingpage" className="fw-bold  text-white">
+              Login here
             </Link>
           </p>
         </form>

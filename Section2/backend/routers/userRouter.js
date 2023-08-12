@@ -22,6 +22,30 @@ router.post('/add',(req,res)=>{
     });
 });
 
+router.get('/getbyid/:id',(req,res)=>{
+  console.log(req.params.id);
+  Model.findById(req.params.id)
+  .then((result) => {
+      res.json(result);
+  }).catch((err) => {
+      console.log(err);
+      res.status(500).json();
+  });
+  });
+
+
+router.put('/update/:id',(req,res)=>{
+  Model.findByIdAndUpdate(req.params.id, req.body,{new:true})
+  .then((result) => {
+      res.json(result);
+  }).catch((err) => {
+      console.log(err);
+      res.status(500).json();
+  });
+  })
+
+
+
 router.post('/authenticate',(req,res)=>{
   Model.findOne(req.body)
   .then((result) => {

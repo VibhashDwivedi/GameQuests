@@ -15,6 +15,11 @@
     background-size: cover;
     min-height:100vh;
 }
+.background3{
+    background-image: url(../images/back2.jpg);
+    background-size: cover;
+    height:150vh;
+}
 
 .main{
     margin-top: 40px;
@@ -31,5 +36,19 @@
 }
 
 .signupcard{
-    background-color: lightblue;
+    background-color: rgba(173, 216, 230, 0.199);
+    border:white;
+    box-shadow: 1px 1px 7px 2px rgb(249, 249, 250)
+}
+.editcard{
+    background-color: rgba(173, 216, 230, 0.199);
+    border:white;
+    box-shadow: 1px 1px 7px 2px rgb(249, 249, 250)
+}
+
+.edit-title{
+    text-shadow: 1px 1px white;
+}
+.edit-title2{
+    text-shadow: 5px 5px black;
 }

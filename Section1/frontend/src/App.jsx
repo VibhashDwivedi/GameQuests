@@ -10,6 +10,8 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import User from './components/User';
 import HomeProfile from './components/HomeProfile';
+import Create from './components/Create';
+import EditUser from './components/EditUser';
 
 
 function App() {
@@ -26,6 +28,9 @@ return (
   <Route path='home' element={<Home/>}></Route>
   <Route path='homeprofile' element={<HomeProfile/>}></Route>
   <Route path='user' element={<User/>}></Route>
+  <Route path='edituser' element={<EditUser/>}></Route>
+  
+  {/* <Route path='create' element={<Create/>}></Route> */}
  
   <Route path='*' element={<Error/>}></Route>
 

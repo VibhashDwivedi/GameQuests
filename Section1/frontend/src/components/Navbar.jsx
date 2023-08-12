@@ -3,12 +3,26 @@ import pic from '../images/GameQuestsLogo.png'
 import '../css/createpost.css'
 import '../css/home.css'
 import { Link } from 'react-router-dom';
+import LandingPage from './LandingPage';
+import useUserContext from '../UserContext';
 
 const Navbar = () => {
 
+ 
+
+ 
+
+  const {LoggedIn, logout} = useUserContext();
+  
   const [currentUser, setcurrentUser] = useState(
     JSON.parse(sessionStorage.getItem('user'))
-  );
+  )
+  
+
+  if(!LoggedIn)
+  return<LandingPage/>
+  
+ console.log(currentUser);
  
   return (
     <div>
@@ -32,14 +46,9 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
         <li className="nav-item">
-          <a className="nav-link  links1" aria-current="page" href="#">
+          <Link className="nav-link  links1" to='/home'>
             HOME
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link links1" href="#">
-            TOURNAMENT
-          </a>
+          </Link>
         </li>
         <li className="">
           <a className="nav-link links1" href="#">
@@ -48,7 +57,7 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link>
-          <button className="btn btn-danger mx-2">Log Out</button>
+          <button className="btn btn-danger mx-2 " onClick={logout}>Log Out</button>
           </Link>
         </li>
         <li className='nav-items'>

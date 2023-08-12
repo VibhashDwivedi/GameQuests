@@ -1,5 +1,5 @@
 *{
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
 }
 
 .links1{
@@ -11,4 +11,15 @@
 .links1:visited{
   
     color: white;
+}
+
+.backhome{
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.575)),url(../images/Back4.jpg);
+    background-size: cover;
+    min-height:100vh;
+}
+.backhome2{
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.575)),url(../images/Back4.jpg);
+    background-size: cover;
+    min-height:100vh;
 }
