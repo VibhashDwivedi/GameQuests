@@ -83,9 +83,11 @@ validationSchema : SignupSchema
  
   return (<>
   
-    <div className=" background2 ">
-    <Header/>
-    <div className='d-flex justify-content-left'>
+    <div className=" background2 " >
+   
+     
+      <Header/>
+    <div className='d-flex justify-content-left ' id=''>
     <div className="card mt-4  p-3 py-2   text-white signupcard"  style={{width:'550px', height:'520px' , marginLeft:'90px'}}>
       <div className="card-body card-shadow-lg ">
         <h2 className="text-uppercase text-center my-2 text-white fs-1 fw-bold edit-title2">Register your account</h2>
@@ -157,6 +159,9 @@ validationSchema : SignupSchema
       </div>
     </div>
     </div>
+
+   
+   
   </div>
   
   </>

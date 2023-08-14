@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import LandingPage from './LandingPage';
 import useUserContext from '../UserContext';
+import Pulse from 'react-reveal/Pulse';
 
 const Home = () => {
 
@@ -65,7 +66,9 @@ const Home = () => {
 
             </div>
         </div> 
-          </>)
+        
+          </>
+          )
         
        )
     }
@@ -146,28 +149,37 @@ const Home = () => {
         <header>
             <div className="container py-5 my-3 mt-5 ">
                 <p className='display-2 text-center fw-bold text-white'>Search Tournaments</p>
-                <input type="text" className='form-control w-75 m-auto'  onChange={filterTournament} / >
+                <div className="d-flex"  style={{marginLeft:'170px'}}>
+                <input type="text" className='form-control w-75 m-auto '  onChange={filterTournament}  / >
+               
+                <div className=' nav-item dropdown p-2 bg-white text-black rounded-2 ' style={{ marginRight:'130px'}}>
+          <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Filters 
+          </a>
+          <div class="dropdown-menu my-2 p-2" >
+             <div className="   form-check form-switch text-black fw-bold "><input type="checkbox" name="pc"  className=' form-check-input' onChange={filterTournamentPlatform} onClick={handleChange} />PC </div>
+             <div className="  form-check form-switch text-black fw-bold"><input type="checkbox" name="pc"  className=' form-check-input' onChange={filterTournamentPlatform2} onClick={handleChange} />Mobile</div>
+            <div className="  form-check form-switch text-black fw-bold"><input type="checkbox" name="pc"  className=' form-check-input' onChange={filterTournamentDate} onClick={handleChange} />Expired</div>
+            <div className="  form-check form-switch text-black fw-bold"><input type="checkbox" name="pc"  className=' form-check-input' onChange={filterTournamentDate2} onClick={handleChange} />Active</div>
+           
+          </div>
+          </div>
+    
+                </div>
+              
                    
                     <div className="container w-75 mt-4">
-                    <div className='d-flex'>
-                        <button className="btn btn-outline-primary rounded-5 line2" style={{marginRight:'7px'}}>
-                        <h5 htmlFor="" className='text-white mx-2 mt-1'>Filters</h5> 
-                        </button>
-
                     
-                    <button className="btn btn-outline-primary rounded-5 mx-2 form-check form-switch text-white fw-bold line2"><input type="checkbox" name="pc"  className='mx-1 form-check-input' onChange={filterTournamentPlatform} onClick={handleChange} />PC</button>
-                    <button className="btn btn-outline-primary rounded-5 mx-2 form-check form-switch text-white fw-bold line2"><input type="checkbox"  name="pc"   className='mx-1 form-check-input' onChange={filterTournamentPlatform2} onClick={handleChange}/>Mobile</button>
-                    <button className="btn btn-outline-primary rounded-5 mx-2 form-check form-switch text-white fw-bold line2"><input type="checkbox"  name="pc" className='mx-1 form-check-input' onChange={filterTournamentDate} onClick={handleChange}/>Expired</button>
-                    <button className="btn btn-outline-primary rounded-5 mx-2 form-check form-switch text-white fw-bold line2"><input type="checkbox"  name="pc" className='mx-1 form-check-input' onChange={filterTournamentDate2} onClick={handleChange}/>Active</button>
+                      
                     
-                    </div>
+                    
                     </div>
                    
              
             </div>
         </header>
         <div className='container'  >
-            <div className='row mt-3'  >{displayTournament()}</div>
+      <div className='row mt-3'  >{displayTournament()}</div>
         </div>
       
     </div>

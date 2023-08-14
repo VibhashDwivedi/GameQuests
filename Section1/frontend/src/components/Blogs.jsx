@@ -14,6 +14,7 @@ const Blogs = () => {
       )
 
 const [post, setpost] = useState([])
+const [post2, setpost2] = useState([])
 
       const fetchUserData = async () =>{
         const res = await fetch('http://localhost:5000/post/getall');
@@ -24,12 +25,13 @@ const [post, setpost] = useState([])
             const data = await res.json();
             console.log(data);
             setpost(data);
+            setpost2(data);
             //setsearch(data);
         }
     };
     useEffect(() => {
       fetchUserData();
-    }, []);
+    }, [post]);
 
 
     const displayPost = ()=>{
@@ -45,7 +47,7 @@ const [post, setpost] = useState([])
         }
     }
 
-    
+   
 
     const postSchema = Yup.object().shape({
         content: Yup.string().required('Required'),
@@ -85,6 +87,7 @@ const [post, setpost] = useState([])
     validationSchema:postSchema
     });
     
+    
     const {LoggedIn, logout} = useUserContext();
      if(!LoggedIn)
      return<LandingPage/>
@@ -113,7 +116,10 @@ const [post, setpost] = useState([])
             <button type='submit' className="btn btn-outline-info mt-4 text-white">Publish Post</button>
         </form>
     </div>
+   
+    
 <div className="container w-75 mt-5">
+ 
     <div className='signupcard p-4'>{displayPost()}</div></div>
     
   </div>
