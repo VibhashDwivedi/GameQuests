@@ -1,6 +1,7 @@
 import React from 'react'
 import pic from '../images/GameQuestsLogo.png'
 import '../css/createpost.css'
+import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <div className='bg-dark text-white'>
@@ -11,7 +12,11 @@ const Header = () => {
       GameQuests
     </h1>
    
-
+  <div className="ms-auto">
+    <Link to="/landingpage"><button className="btn btn-primary">Login</button></Link>
+    <Link to="/signup"><button className="btn btn-primary mx-4">Sign Up</button></Link>
+    <Link to="/about"><button className="btn btn-primary">About Us</button></Link>
+  </div>
    
   </div>
 </nav>

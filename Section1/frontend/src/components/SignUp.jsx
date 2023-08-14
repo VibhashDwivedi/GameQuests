@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import {useNavigate, Link} from 'react-router-dom'
 
 import * as Yup from 'yup';
+import Header from './Header';
 
 const SignUp = () => {
 
@@ -80,10 +81,12 @@ validationSchema : SignupSchema
     console.log(res.status);
   }
  
-  return (
-    <div className="d-flex align-items-center justify-content-left background2 ">
- 
-    <div className="card my-3  p-5 py-2   text-white signupcard"  style={{width:'550px', height:'560px' , marginLeft:'90px'}}>
+  return (<>
+  
+    <div className=" background2 ">
+    <Header/>
+    <div className='d-flex justify-content-left'>
+    <div className="card mt-4  p-3 py-2   text-white signupcard"  style={{width:'550px', height:'520px' , marginLeft:'90px'}}>
       <div className="card-body card-shadow-lg ">
         <h2 className="text-uppercase text-center my-2 text-white fs-1 fw-bold edit-title2">Register your account</h2>
         <form onSubmit={signupForm.handleSubmit} >
@@ -153,9 +156,10 @@ validationSchema : SignupSchema
         </form>
       </div>
     </div>
+    </div>
   </div>
   
-
+  </>
 
 
 

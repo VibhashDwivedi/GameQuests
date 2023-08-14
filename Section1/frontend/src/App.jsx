@@ -12,6 +12,8 @@ import User from './components/User';
 import HomeProfile from './components/HomeProfile';
 import Create from './components/Create';
 import EditUser from './components/EditUser';
+import About from './components/About';
+import Blogs from './components/Blogs';
 
 
 function App() {
@@ -29,6 +31,8 @@ return (
   <Route path='homeprofile' element={<HomeProfile/>}></Route>
   <Route path='user' element={<User/>}></Route>
   <Route path='edituser' element={<EditUser/>}></Route>
+  <Route path='about' element={<About/>}></Route>
+  <Route path='blogs' element={<Blogs/>}></Route>
   
   {/* <Route path='create' element={<Create/>}></Route> */}
  

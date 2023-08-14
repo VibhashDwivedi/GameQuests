@@ -13,7 +13,7 @@
   /* display: inline-block; */
   vertical-align: top;
 
-  margin-top: -1770px;
+  margin-top: -1810px;
   margin-right: 10px;
   width: 250px;
   height: 320px;
@@ -24,6 +24,13 @@
   border:white;
   box-shadow: 1px 1px 7px 2px rgb(249, 249, 250)
 }
+
+.tournament-card:hover{
+  transform: scale(1.05);
+  border:white;
+  box-shadow: 1px 1px 7px 2px rgb(249, 249, 250)
+}
+
 .profilecard{
   background-color: rgba(156, 153, 153, 0.281);
   border:white;
@@ -37,4 +44,8 @@
 .line2{
   color:blue;
   box-shadow: 1px 1px 5px 1px  white;
+}
+
+textarea{
+  height: 160px;
 }

@@ -15,6 +15,7 @@ const Create = () => {
     title: Yup.string().required('Required'),
     players: Yup.string().required('Required'),
     startDate: Yup.string().required('Required'),
+    startMonth: Yup.string().required('Required'),
     startTime: Yup.string().required('Required'),
     link: Yup.string().required('Required'),
     platform: Yup.string().required('Required'),
@@ -26,7 +27,8 @@ const Create = () => {
       title: '',
       players: '',
       startDate: '',
-      startTime: '',
+      startMonth: '',
+      startTime:'',
       link: '',
       platform: '',
       image:''
@@ -125,6 +127,16 @@ validationSchema : CreateSchema
               id="form3Example4cg"
               className="form-control "
               name="startDate" onChange={signupForm.handleChange} value={signupForm.values.startDate} 
+            />
+          <label className="form-label mt-2 text-black" htmlFor="form3Example4cg">
+              Start Month
+            </label>
+            <p className='error-label'>{signupForm.touched.startMonth? signupForm.errors.startMonth:''}</p>
+            <input
+              type="text"
+              id="form3Example4cg"
+              className="form-control "
+              name="startMonth" onChange={signupForm.handleChange} value={signupForm.values.startMonth} 
             />
           <label className="form-label mt-2 text-black" htmlFor="form3Example4cg">
               Start Time
