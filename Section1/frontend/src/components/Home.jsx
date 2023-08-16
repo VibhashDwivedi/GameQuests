@@ -38,8 +38,7 @@ const Home = () => {
 
 
     const {LoggedIn} = useUserContext();
-    if(!LoggedIn)
-    return<LandingPage/>
+    
    
 
     const displayTournament = () => {

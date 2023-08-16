@@ -112,9 +112,7 @@ const EditUser = () => {
    
       
 
-    if(!LoggedIn)
-    return<LandingPage/>
-  
+    
    
     return (
         <div className='backhome2'>

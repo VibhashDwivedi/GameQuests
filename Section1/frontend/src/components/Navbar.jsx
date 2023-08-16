@@ -19,8 +19,7 @@ const Navbar = () => {
   )
   
 
-  if(!LoggedIn)
-  return<LandingPage/>
+ 
   
  console.log(currentUser);
  

@@ -14,6 +14,7 @@ import Create from './components/Create';
 import EditUser from './components/EditUser';
 import About from './components/About';
 import Blogs from './components/Blogs';
+import UserAuth from './UserAuth';
 
 
 
@@ -27,13 +28,13 @@ return (
 <Route path='/' element={<LandingPage/>}></Route>
   <Route path='landingpage' element={<LandingPage/>}></Route>
   <Route path='signup' element={<SignUp/>}></Route>
-  <Route path='navbar' element={<Navbar/>}></Route>
-  <Route path='home' element={<Home/>}></Route>
-  <Route path='homeprofile' element={<HomeProfile/>}></Route>
-  <Route path='user' element={<User/>}></Route>
-  <Route path='edituser' element={<EditUser/>}></Route>
+  <Route path='navbar' element={<UserAuth><Navbar/></UserAuth>}></Route>
+  <Route path='home' element={<UserAuth><Home/></UserAuth>}></Route>
+  <Route path='homeprofile' element={<UserAuth><HomeProfile/></UserAuth>}></Route>
+  <Route path='user' element={<UserAuth><User/></UserAuth>}></Route>
+  <Route path='edituser' element={<UserAuth><EditUser/></UserAuth>}></Route>
   <Route path='about' element={<About/>}></Route>
-  <Route path='blogs' element={<Blogs/>}></Route>
+  <Route path='blogs' element={<UserAuth><Blogs/></UserAuth>}></Route>
   
   {/* <Route path='create' element={<Create/>}></Route> */}
  
