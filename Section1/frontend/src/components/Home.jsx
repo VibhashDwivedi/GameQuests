@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import LandingPage from './LandingPage';
 import useUserContext from '../UserContext';
-import Pulse from 'react-reveal/Pulse';
+import Zoom from 'react-reveal/Zoom';
+import Reveal from 'react-reveal/Reveal';
+import Slide from 'react-reveal/Slide';
 
 const Home = () => {
 
@@ -148,10 +150,10 @@ const Home = () => {
        
         <header>
             <div className="container py-5 my-3 mt-5 ">
-                <p className='display-2 text-center fw-bold text-white'>Search Tournaments</p>
-                <div className="d-flex"  style={{marginLeft:'170px'}}>
-                <input type="text" className='form-control w-75 m-auto '  onChange={filterTournament}  / >
-               
+                <p className='display-2 text-center fw-bold text-white'> Search Tournaments</p>
+               <div className="d-flex"  style={{marginLeft:'170px'}}>
+                 <input type="text" className='form-control w-75 m-auto '  onChange={filterTournament}  / >
+             
                 <div className=' nav-item dropdown p-2 bg-white text-black rounded-2 ' style={{ marginRight:'130px'}}>
           <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Filters 
@@ -165,7 +167,7 @@ const Home = () => {
           </div>
           </div>
     
-                </div>
+                </div> 
               
                    
                     <div className="container w-75 mt-4">
@@ -178,10 +180,10 @@ const Home = () => {
              
             </div>
         </header>
-        <div className='container'  >
-      <div className='row mt-3'  >{displayTournament()}</div>
+       <div className='container'  >
+       <div className='row mt-3'  > {displayTournament()}</div>
         </div>
-      
+        
     </div>
   )
 }

@@ -6,6 +6,7 @@ import { useFormik } from 'formik';
 import { toast } from 'react-hot-toast';
 import useUserContext from '../UserContext';
 import * as Yup from 'yup'
+import Zoom from 'react-reveal/Zoom';
 
 const Blogs = () => {
 
@@ -39,8 +40,10 @@ const [post2, setpost2] = useState([])
         else{
             return post.map((posts) =>(
                 <>
-                <div className="text-black fw-bold fs-4">{posts.username}</div>
-                <div className='text-white'>{posts.content}</div>
+                <div className="d-flex"><img src={"http://localhost:5000/"+posts.image} alt=""   className='rounded-circle'  width={35} height={35}/>
+                <div className="text-white fw-bold mx-2 fs-4">{posts.username}</div></div>
+                <div className="container me-auto mt-2"> <div className='text-white'>{posts.content}</div></div>
+               
                 <hr className='line'/>
                 </>
             )) 
@@ -61,6 +64,7 @@ const [post2, setpost2] = useState([])
         initialValues:{
           content: '',
           username: currentUser.name,
+          image: currentUser.avatar,
     },
     onSubmit: async (values) => {
        console.log(values);
@@ -105,7 +109,7 @@ const [post2, setpost2] = useState([])
        <div >
   <div className="container w-75 ">
 
-   <div className="d-flex justify-content-center"><h1  style={{marginTop:'100px', fontSize:'70px'}} className='text-white '>Connect</h1></div>
+   <div className="d-flex justify-content-center"><h1  style={{marginTop:'100px', fontSize:'70px'}} className='text-white '> <Zoom left cascade>Connect</Zoom></h1></div>
  
         <form action="#" method="post" onSubmit={postForm.handleSubmit}>
             <div className="form-group ">

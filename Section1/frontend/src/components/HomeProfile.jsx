@@ -13,7 +13,7 @@ const HomeProfile = () => {
   return(
     <>
     <Home/>
-    <User/>
+   <User/> 
     </>
   )
 
