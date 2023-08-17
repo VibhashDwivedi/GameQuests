@@ -1,6 +1,6 @@
 # GameQuests (Place to find Game Tournaments all Over The World)
 
-**Commands Used**
+# Commands Used
 ## To run Frontend - npm start
 ## To run Backend - npm run dev
 
