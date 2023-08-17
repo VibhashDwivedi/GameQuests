@@ -1,11 +1,11 @@
 # GameQuests (Place to find Game Tournaments all Over The World)
 
-# Commands Used
+## Commands Used
 ### 1. To run Frontend - npm start
 ### 2. To run Backend - npm run dev
 
-# Screenshots
-## On Opening the page by running the command (npm start)
+## Screenshots
+### On Opening the page by running the command (npm start)
 ![Landing Page](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/LandingPage.png)
 
 ## Signup Page
@@ -33,10 +33,10 @@
 ### On this page users can connect with others, share their views, and give feedback
 ![Blogs](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Blogs.png?raw=true)
 
-## UserProfile
+## UserProfile Page
 ![UserProfile](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/UserProfile.png?raw=true)
 
-## Update User Details
+## Update User Details Page
 ![Update](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Update.png?raw=true)
 
 ### If you don't Log In and try to access home page or blogs page , an alert shows up.
