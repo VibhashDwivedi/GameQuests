@@ -35,6 +35,7 @@
 ![Blogs](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Blogs.png?raw=true)
 
 ## UserProfile Page
+### Users can view their profile and edit it
 ![UserProfile](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/UserProfile.png?raw=true)
 
 ## Update User Details Page
