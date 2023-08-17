@@ -18,8 +18,8 @@ const Navbar = () => {
     JSON.parse(sessionStorage.getItem('user'))
   )
   
-
- 
+if(!LoggedIn)
+return <LandingPage/> 
   
  console.log(currentUser);
  
@@ -55,7 +55,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link>
+          <Link to='/landingpage'>
           <button className="btn btn-danger mx-2 " onClick={logout}>Log Out</button>
           </Link>
         </li>

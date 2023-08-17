@@ -17,7 +17,8 @@ const User = () => {
         JSON.parse(sessionStorage.getItem("user"))
       );
       
-  
+      if(!LoggedIn)
+      return <LandingPage/>
 
 
   

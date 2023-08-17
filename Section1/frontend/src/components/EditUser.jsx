@@ -109,7 +109,8 @@ const EditUser = () => {
       }
 
    
-   
+      if(!LoggedIn)
+      return <LandingPage/>
       
 
     

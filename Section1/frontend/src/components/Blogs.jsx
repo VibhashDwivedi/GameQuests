@@ -94,7 +94,8 @@ const [post2, setpost2] = useState([])
     
     const {LoggedIn, logout} = useUserContext();
     
-
+    if(!LoggedIn)
+    return <LandingPage/>
 
 
 

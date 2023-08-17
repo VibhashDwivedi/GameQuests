@@ -1,27 +1,25 @@
 import React, { useState } from 'react'
-import {Navigate} from 'react-router-dom'
-import Swal from 'sweetalert2';
+import { Navigate } from 'react-router-dom';
+import Swal from "sweetalert2";  
 
-export const UserAuth = ({childern}) => {
+const UserAuth = ({children}) => {
 
-    
+  const [currentUser, setcurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem('user'))
+  );
 
-     const [currentUser, setcurrentUser] = useState(
-        JSON.parse(sessionStorage.getItem('user'))
-     );
-     
+  if(currentUser!=null){
+    return children;
+  } else {
+    Swal.fire({
+      icon : 'error',
+      title : "OOPs....",
+      text : "Please Login to Continue"
+    })
 
-     if(currentUser!== null)
-     return childern
-    else{
+    return <Navigate to='/landingpage'/>
+  }
 
-        Swal.fire({
-            icon:'error',
-            title:'Oops...',
-            text:'You are not Logged In'
-        })
-        return <Navigate to='/landingpage'/>
-    }
 }
 
 export default UserAuth
