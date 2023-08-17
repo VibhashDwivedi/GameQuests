@@ -12,12 +12,17 @@
 ## Home Page
 ![Home Page](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Home.png?raw=true)
 
-### You can search for tournaments by their name
+### 1.You can search for tournaments by their name
 ![Search](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/SearchByName.png?raw=true)
 
-### You can filter tournaments on basis of platform whether PC or Mobile
+### 2.You can filter tournaments on basis of platform whether PC or Mobile
 ![PC](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/FilterByPlatform.png?raw=true)
 
-### You can also filter them on basis of expired and active tournaments
+### 3.You can also filter them on basis of expired and active tournaments
 ![Expired](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Expired.png?raw=true)
+---
 ![Active](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Active.png?raw=true)
+
+## Blogs Page
+### On this page users can connect with others, share their views, and give feedback
+![Blogs](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Blogs.png?raw=true)
