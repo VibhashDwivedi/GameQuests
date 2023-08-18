@@ -19,6 +19,8 @@
 ## Home Page
 ![Home Page](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Home.png?raw=true)
 
+![Home Page](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/Home2.png?raw=true)
+
 ### 1.You can search for tournaments by their name
 ![Search](https://github.com/VibhashDwivedi/GameQuests/blob/main/Screenshots/SearchByName.png?raw=true)
 
