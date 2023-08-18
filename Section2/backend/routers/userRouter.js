@@ -22,6 +22,17 @@ router.post('/add',(req,res)=>{
     });
 });
 
+router.get('/getall',(req,res)=>{
+
+  Model.find({})
+  .then((result) => {
+      res.json(result);
+  }).catch((err) => {
+      console.log(err);
+      res.status(500).json();
+  });
+});
+
 router.get('/getbyid/:id',(req,res)=>{
   console.log(req.params.id);
   Model.findById(req.params.id)
