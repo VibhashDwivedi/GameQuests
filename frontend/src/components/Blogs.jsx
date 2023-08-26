@@ -10,6 +10,12 @@ import Zoom from 'react-reveal/Zoom';
 
 const Blogs = () => {
 
+  const current = new Date();
+  const date = current.getDate();
+  const month = current.getMonth(); //Be careful! January is 0 not 1
+  const year = current.getFullYear();
+  
+
     const [currentUser, setcurrentUser] = useState(
         JSON.parse(sessionStorage.getItem('user'))
       )
@@ -36,12 +42,24 @@ const [post2, setpost2] = useState([])
 
 
     const displayPost = ()=>{
+
+      post.sort((a,b) => {
+        if(a.date > b.date) return -1;
+        if(a.date < b.date) return 1;
+        if(a.time > b.time) return -1;
+        if(a.time < b.time) return 1;
+        return 0;
+      });
+
+
+
         if(post.length===0)  return <h1 className='text-center text-white '>No Data Found</h1>
         else{
             return post.map((posts) =>(
                 <>
                 <div className="d-flex"><img src={"http://localhost:5000/"+posts.image} alt=""   className='rounded-circle'  width={35} height={35}/>
-                <div className="text-white fw-bold mx-2 fs-4">{posts.username}</div></div>
+                <div className="text-white fw-bold mx-2 fs-4">{posts.username}</div>
+                <div className='mt-2 fw-lighter text-white'>on {posts.date} at {posts.time}</div></div>
                 <div className="container me-auto mt-2"> <div className='text-white'>{posts.content}</div></div>
                
                 <hr className='line'/>
@@ -65,6 +83,8 @@ const [post2, setpost2] = useState([])
           content: '',
           username: currentUser.name,
           image: currentUser.avatar,
+          date: date + '/' + (month + 1) + '/' + year,
+          time: current.getHours() + ':' + current.getMinutes() + ':' + current.getSeconds()
     },
     onSubmit: async (values) => {
        console.log(values);
@@ -83,6 +103,8 @@ const [post2, setpost2] = useState([])
      if(res.status === 200){
       toast.success('Post Created Successfully😊')
     }
+    //refresh after addin
+    postForm.resetForm();
     
      
     
