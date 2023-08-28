@@ -10,6 +10,7 @@ const postRouter = require('./routers/postRouter')
 const tournamentRouter = require('./routers/tournamentRouter')
 const utilRouter = require('./routers/util');
 const req = require('express/lib/request');
+const BASE_URL = process.env.BASE_PORT || 5000;
 
 
 app.use(cors({
@@ -38,6 +39,6 @@ app.post('/submit', (req, res)=>{
     res.send("success saved to the db");
 })
 
-app.listen(5000, ()=>{
+app.listen(BASE_URL, ()=>{
     console.log("server listening on 5000");
 })
