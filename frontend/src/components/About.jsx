@@ -13,7 +13,7 @@ const About = () => (
         <div className='text-center mt-5'>
             <h1 className='text-white display-2 fw-bold mt-5 pt-4'>GameQuests</h1></div>
         <div className="container">
-            <div className="card signupcard line2 p-4  ">
+            <div className="card signupcard line2 p-4 mb-3 ">
                 
                 <p className='mx-3 text-white fs-3 fw-light'>Welcome to GameQuests, Your Ultimate Source for Global Game Tournaments!</p>
 
@@ -26,10 +26,10 @@ const About = () => (
            <Link to="/signup" className='d-flex justify-content-center'><button className="w-50 p-2 btn btn-primary line2 text-white ">JOIN NOW!!</button></Link>
             <div className="container  mt-5">
                 <div className=" d-flex">
-                   <div><img src={'http://localhost:5000/card1.jpg'} width={212} height={150} alt=""  className='rounded-2 mx-4'/></div> 
-                  <div><img src={'http://localhost:5000/card6.webp'} width={212} height={150} alt=""  className='rounded-2 mx-3 '/></div>  
-                    <img src={'http://localhost:5000/card3.webp'} width={212} height={150} alt=""  className='rounded-2 mx-3'/>
-                    <img src={'http://localhost:5000/card5.webp'} width={212} height={150} alt=""  className='rounded-2 mx-3'/>
+                   <div><img src={'https://game-quests.onrender.com/card1.jpg'} width={212} height={150} alt=""  className='rounded-2 mx-4'/></div> 
+                  <div><img src={'https://game-quests.onrender.com/card6.webp'} width={212} height={150} alt=""  className='rounded-2 mx-3 '/></div>  
+                    <img src={'https://game-quests.onrender.com/card3.webp'} width={212} height={150} alt=""  className='rounded-2 mx-3'/>
+                    <img src={'https://game-quests.onrender.com/card5.webp'} width={212} height={150} alt=""  className='rounded-2 mx-3'/>
                 
                 </div>
             </div>
