@@ -14,7 +14,7 @@ const req = require('express/lib/request');
 
 
 app.use(cors({
-    origin: ['http://localhost:3000']
+    origin: ['https://game-quests.vercel.app' , 'http://localhost:3000']
 }));
 app.use(express.json());
 
