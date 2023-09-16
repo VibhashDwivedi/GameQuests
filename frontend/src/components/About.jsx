@@ -12,8 +12,8 @@ const About = () => (
    
         <div className='text-center mt-5'>
             <h1 className='text-white display-2 fw-bold mt-5 pt-4'>GameQuests</h1></div>
-        <div className="container">
-            <div className="card signupcard line2 p-4 mb-3 ">
+        <div className="container mb-3">
+            <div className="card signupcard line2 p-4  ">
                 
                 <p className='mx-3 text-white fs-3 fw-light'>Welcome to GameQuests, Your Ultimate Source for Global Game Tournaments!</p>
 

@@ -23,7 +23,7 @@ const [post, setpost] = useState([])
 const [post2, setpost2] = useState([])
 
       const fetchUserData = async () =>{
-        const res = await fetch('http://localhost:5000/post/getall');
+        const res = await fetch('https://game-quests.onrender.com/post/getall');
     
         console.log(res.status);
     
@@ -56,7 +56,7 @@ const [post2, setpost2] = useState([])
         else{
             return post.map((posts) =>(
                 <>
-                <div className="d-flex"><img src={"http://localhost:5000/"+posts.image} alt=""   className='rounded-circle'  width={35} height={35}/>
+                <div className="d-flex"><img src={"https://game-quests.onrender.com/"+posts.image} alt=""   className='rounded-circle'  width={35} height={35}/>
                 <div className="text-white fw-bold mx-2 fs-4">{posts.username}</div>
                 <div className='mt-2 fw-lighter text-white'>on {posts.date} at {posts.time}</div></div>
                 <div className="container me-auto mt-2"> <div className='text-white'>{posts.content}</div></div>
@@ -88,7 +88,7 @@ const [post2, setpost2] = useState([])
     onSubmit: async (values) => {
        console.log(values);
         //sending request to backend
-      const res = await fetch("http://localhost:5000/post/add",
+      const res = await fetch("https://game-quests.onrender.com/post/add",
       {method:'POST',
        body:JSON.stringify(values),
        headers:{

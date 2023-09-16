@@ -38,7 +38,7 @@ const Create = () => {
       values.image= selImage;
        console.log(values);
         //sending request to backend
-      const res = await fetch("http://localhost:5000/tournament/add",
+      const res = await fetch("https://game-quests.onrender.com/tournament/add",
       {method:'POST',
        body:JSON.stringify(values),
        headers:{
@@ -76,7 +76,7 @@ validationSchema : CreateSchema
     setselImage(file.name);
     const fd = new FormData();
     fd.append('myfile', file);
-    const res =await fetch ('http://localhost:5000/util/uploadfile',{
+    const res =await fetch ('https://game-quests.onrender.com/util/uploadfile',{
       method:'POST',
       body :fd
     });
