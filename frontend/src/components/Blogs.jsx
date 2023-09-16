@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 import { toast } from 'react-hot-toast';
 import useUserContext from '../UserContext';
 import * as Yup from 'yup'
-import Zoom from 'react-reveal/Zoom';
+
 
 const Blogs = () => {
 
@@ -130,7 +130,7 @@ const [post2, setpost2] = useState([])
        <div >
   <div className="container w-75 ">
 
-   <div className="d-flex justify-content-center"><h1  style={{marginTop:'100px', fontSize:'70px'}} className='text-white '> <Zoom left cascade>Connect</Zoom></h1></div>
+   <div className="d-flex justify-content-center"><h1  style={{marginTop:'100px', fontSize:'70px'}} className='text-white '> Connect</h1></div>
  
         <form action="#" method="post" onSubmit={postForm.handleSubmit}>
             <div className="form-group ">

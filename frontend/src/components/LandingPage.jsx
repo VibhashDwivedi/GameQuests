@@ -9,7 +9,7 @@ import useUserContext from '../UserContext'
 import Bounce from 'react-reveal/Bounce';
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
-import Pulse from 'react-reveal/Pulse';
+
 
 
 const LandingPage = () => {
@@ -87,7 +87,7 @@ const LandingPage = () => {
     <div className='d-flex justify-content-center mt-5'>
 <div className="text-center mx-5 w-50  ">
    
-            <h1 className='head1'>  <Pulse>Find Your Game Tournaments Here!!</Pulse></h1>
+            <h1 className='head1'> Find Your Game Tournaments Here!!</h1>
             <h4 className='fw-light m-4 mx-5 text-light px-5' > Multiple tournaments and events waiting for you to join in!!!!!</h4>
            <form action=""   onSubmit={loginForm.handleSubmit}>
                 

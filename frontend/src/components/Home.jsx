@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import LandingPage from './LandingPage';
 import useUserContext from '../UserContext';
-import Zoom from 'react-reveal/Zoom';
-import Reveal from 'react-reveal/Reveal';
-import Slide from 'react-reveal/Slide';
+
 
 const Home = () => {
 

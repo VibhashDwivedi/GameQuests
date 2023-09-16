@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import '../css/createpost.css'
 import { Link } from 'react-router-dom'
-import Zoom from 'react-reveal/Zoom';
+
 
 const About = () => (
 <>
@@ -11,7 +11,7 @@ const About = () => (
         <div className="position-fixed w-100 top-0 z-2"> <Header /></div>
    
         <div className='text-center mt-5'>
-            <h1 className='text-white display-2 fw-bold mt-5 pt-4'><Zoom left cascade>GameQuests</Zoom></h1></div>
+            <h1 className='text-white display-2 fw-bold mt-5 pt-4'>GameQuests</h1></div>
         <div className="container">
             <div className="card signupcard line2 p-4  ">
                 
