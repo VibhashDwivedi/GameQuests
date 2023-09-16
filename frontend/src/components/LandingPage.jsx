@@ -6,9 +6,7 @@ import Swal from 'sweetalert2'
 import * as Yup from 'yup'
 import { Link, useNavigate } from 'react-router-dom'
 import useUserContext from '../UserContext'
-import Bounce from 'react-reveal/Bounce';
-import Slide from 'react-reveal/Slide';
-import Fade from 'react-reveal/Fade';
+
 
 
 
