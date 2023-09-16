@@ -17,7 +17,7 @@ const EditUser = () => {
 
     const [selImage, setselImage] = useState(currentUser.avatar)
     const fetchUserData = async () => {
-        const res = await fetch("http://localhost:5000/user/getbyid/"+currentUser._id);
+        const res = await fetch("https://game-quests.onrender.com/user/getbyid/"+currentUser._id);
         console.log(res.status);
 
         const data = await res.json();
@@ -53,7 +53,7 @@ const EditUser = () => {
         values.avatar= selImage;
          console.log(values);
           //sending request to backend
-        const res = await fetch("http://localhost:5000/user/update/"+currentUser._id,
+        const res = await fetch("https://game-quests.onrender.com/user/update/"+currentUser._id,
         {method:'PUT',
          body:JSON.stringify(values),
          headers:{
@@ -100,7 +100,7 @@ const EditUser = () => {
         setselImage(file.name);
         const fd = new FormData();
         fd.append('myfile', file);
-        const res =await fetch ('http://localhost:5000/util/uploadfile',{
+        const res =await fetch ('https://game-quests.onrender.com/util/uploadfile',{
           method:'PUT',
           body :fd
         });

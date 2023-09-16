@@ -19,7 +19,7 @@ const Home = () => {
     const [search, setsearch] = useState([])
 
     const fetchUserData = async () =>{
-        const res = await fetch('http://localhost:5000/tournament/getall');
+        const res = await fetch('https://game-quests.onrender.com/tournament/getall');
     
         console.log(res.status);
     
@@ -48,7 +48,7 @@ return <LandingPage/>
        else{ 
         return Tlist.map((tournament) =>   (<> <div className='col-md-3 mb-4 '>
             <div className='card tournament-card mx-2 mt-3' >
-            <img width={212} height={150} className='mx-3 my-2 rounded-2' src={"http://localhost:5000/"+tournament.image} alt="" />
+            <img width={212} height={150} className='mx-3 my-2 rounded-2' src={"https://game-quests.onrender.com/"+tournament.image} alt="" />
                 <div className='card-body'>
                     <h4 className='text-white fw-bold'>{tournament.title}</h4>
                     <h5 className='text-white'>Players : {tournament.players}  </h5>

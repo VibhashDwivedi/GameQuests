@@ -28,7 +28,7 @@ const User = () => {
       
         <div className="card  user profilecard ">
             <div className="card-body p-4 text-center text-white">
-            <img width={80} height={80} className='mx-2 rounded-circle' src={"http://localhost:5000/"+currentUser.avatar} alt="" />
+            <img width={80} height={80} className='mx-2 rounded-circle' src={"https://game-quests.onrender.com/"+currentUser.avatar} alt="" />
               <h6 className='mt-3'>Name : {currentUser.name}</h6>
               <h6 className='mt-3'>Email :  {currentUser.email}</h6>
               <Link to='/edituser'> <button className="btn btn-primary">Edit</button></Link>

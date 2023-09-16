@@ -60,7 +60,7 @@ return <LandingPage/>
           </Link>
         </li>
         <li className='nav-items'>
-          <Link to='/homeprofile'  className=''>  <img width={40} height={40} className='mx-2 rounded-circle' src={"http://localhost:5000/"+currentUser.avatar} alt="" />
+          <Link to='/homeprofile'  className=''>  <img width={40} height={40} className='mx-2 rounded-circle' src={"https://game-quests.onrender.com/"+currentUser.avatar} alt="" />
           </Link>
            
               
