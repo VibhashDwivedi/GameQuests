@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import useUserContext from '../UserContext';
 import LandingPage from './LandingPage';
-import Slide from 'react-reveal/Slide';
-import Rotate from 'react-reveal/Rotate';
+
 
 const User = () => {
 
@@ -26,7 +25,7 @@ const User = () => {
 
   return (
     <div className=''>
-       <Slide top>
+      
         <div className="card  user profilecard ">
             <div className="card-body p-4 text-center text-white">
             <img width={80} height={80} className='mx-2 rounded-circle' src={"http://localhost:5000/"+currentUser.avatar} alt="" />
@@ -38,7 +37,7 @@ const User = () => {
             <button className="btn btn-warning text-center ">Close</button>
             </Link></div>
         </div>
-        </Slide>
+        
     </div>
   )
 }

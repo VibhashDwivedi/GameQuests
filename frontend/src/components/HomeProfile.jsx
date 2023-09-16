@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import pic from '../images/GameQuestsLogo.png'
+
 import Home from './Home'
 import User from './User'
-import LandingPage from './LandingPage';
-import useUserContext from '../UserContext';
-import Navbar from './Navbar';
-import { Link } from 'react-router-dom';
+
 
 
 const HomeProfile = () => {

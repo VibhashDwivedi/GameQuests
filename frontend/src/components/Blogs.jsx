@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Header from './Header'
 import Navbar from './Navbar'
 import LandingPage from './LandingPage';
 import { useFormik } from 'formik';
