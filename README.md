@@ -4,7 +4,7 @@
 ## 1. To run Frontend - npm start
 ## 2. To run Backend - npm run dev
 
-[Live Demo](https://game-quests.vercel.app/)
+[Live Demo](https://game-quests-vibhashdwivedi.vercel.app/)
 
 # Screenshots
 ### On Opening the page by running the command (npm start)
