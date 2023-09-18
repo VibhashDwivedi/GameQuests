@@ -149,10 +149,10 @@ return <LandingPage/>
         <header>
             <div className="container py-5 my-3 mt-5 ">
                 <p className='display-2 text-center fw-bold text-white'> Search Tournaments</p>
-               <div className="d-flex"  style={{marginLeft:'170px'}}>
-                 <input type="text" className='form-control w-75 m-auto '  onChange={filterTournament}  / >
+               <div className="d-flex mobile-search"  style={{marginLeft:'170px'}}>
+                 <input type="text" className='form-control w-75 m-auto ' placeholder='Search here...'  onChange={filterTournament}  / >
              
-                <div className=' nav-item dropdown p-2 bg-white text-black rounded-2 ' style={{ marginRight:'130px'}}>
+                <div className=' nav-item dropdown p-2 bg-white text-black rounded-2 mobile-filter' style={{ marginRight:'130px'}}>
           <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Filters 
           </a>

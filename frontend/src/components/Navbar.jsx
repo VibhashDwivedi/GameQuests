@@ -56,11 +56,11 @@ return <LandingPage/>
         </li>
         <li className="nav-item">
           <Link to='/landingpage'>
-          <button className="btn btn-danger mx-2 " onClick={logout}>Log Out</button>
+          <button className="btn btn-danger mx-0 mx-md-2 mx-lg-2  " onClick={logout}>Log Out</button>
           </Link>
         </li>
-        <li className='nav-items'>
-          <Link to='/homeprofile'  className=''>  <img width={40} height={40} className='mx-2 rounded-circle' src={"https://game-quests.onrender.com/"+currentUser.avatar} alt="" />
+        <li className='nav-items '>
+          <Link to='/homeprofile'  className=''>  <img width={40} height={40} className='mx-0 rounded-circle mt-2 mt-md-2 mt-lg-2 mx-md-2 mx-lg-2' src={"https://game-quests.onrender.com/"+currentUser.avatar} alt="" />
           </Link>
            
               

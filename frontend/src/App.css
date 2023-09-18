@@ -19,6 +19,21 @@
   height: 320px;
 }
 
+@media screen and (max-width: 700px) {
+  .user{
+    float:none;
+    /* display: inline-block; */
+    vertical-align: top;
+     margin-left: 20px;
+     margin-top: -5035px;
+    /* margin-right: 10px; */ 
+    width: 250px;
+    height: 320px;
+  }
+}
+  
+
+
 .tournament-card{
   background-color: rgba(255, 255, 255, 0.041);
   border:white;
@@ -35,6 +50,16 @@
   background-color: rgba(156, 153, 153, 0.281);
   border:white;
   box-shadow: 1px 1px 7px 2px rgb(249, 249, 250)
+}
+
+@media screen and (max-width: 600px) {
+  .profilecard{
+    background-color: rgb(75, 73, 73);
+    border:white;
+    box-shadow: 1px 1px 7px 2px rgb(249, 249, 250)
+  }
+
+  
 }
 
 .line{
