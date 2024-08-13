@@ -20,7 +20,7 @@ const Blogs = () => {
       )
 
 const [post, setpost] = useState([])
-const [post2, setpost2] = useState([])
+// const [post2, setpost2] = useState([])
 
       const fetchUserData = async () =>{
         const res = await fetch('https://game-quests.onrender.com/post/getall');
@@ -31,7 +31,7 @@ const [post2, setpost2] = useState([])
             const data = await res.json();
             console.log(data);
             setpost(data);
-            setpost2(data);
+            // setpost2(data);
             //setsearch(data);
         }
     };
@@ -42,6 +42,8 @@ const [post2, setpost2] = useState([])
 
     const displayPost = ()=>{
 
+      //sort post by date and time
+
       post.sort((a,b) => {
         if(a.date > b.date) return -1;
         if(a.date < b.date) return 1;
@@ -51,6 +53,16 @@ const [post2, setpost2] = useState([])
       });
 
 
+      post.sort((a,b) => {
+        if(a.date > b.date) return -1;
+        if(a.date < b.date) return 1;
+        if(a.time > b.time) return -1;
+        if(a.time < b.time) return 1;
+        return 0;
+      });
+
+    //display post in console
+      console.log(post);
 
         if(post.length===0)  return <h1 className='text-center text-white '>No Data Found</h1>
         else{

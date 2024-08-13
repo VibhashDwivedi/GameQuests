@@ -26,8 +26,8 @@ const LandingPage = () => {
 
       const loginForm = useFormik({
         initialValues:{
-            email: '',
-          password: ''
+            email: 'guest@gmail.com',
+          password: 'guestpassword'
     },
     onSubmit : async (values) => {
       console.log(values);
