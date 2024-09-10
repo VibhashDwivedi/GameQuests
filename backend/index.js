@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const app = express();
 const port = 5000;
+const url ="https://game-quests.onrender.com"
 
 const userRouter = require('./routers/userRouter')
 const postRouter = require('./routers/postRouter')
@@ -38,6 +39,21 @@ app.post('/submit', (req, res)=>{
     // save it the the database and
     res.send("success saved to the db");
 })
+
+const interval = 30000;
+
+function reloadWebsite() {
+  axios.get(url)
+    .then(response => {
+      console.log(`Reloaded at ${new Date().toISOString()}: Status Code ${response.status}`);
+    })
+    .catch(error => {
+      console.error(`Error reloading at ${new Date().toISOString()}:`, error.message);
+    });
+}
+
+setInterval(reloadWebsite, interval);
+
 
 app.listen(port, ()=>{
     console.log("server listening on 5000");
